@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: recipes
+  database: d8beh3jg50d5q4
   pool: 50
   host: ec2-184-73-196-82.compute-1.amazonaws.com
   username: ranhoqvjdczsxm
@@ -13,5 +13,5 @@ development:
 
 production:
   <<: *default
-  database: postgresql-amorphous-52836
+  database: d8beh3jg50d5q4
 
