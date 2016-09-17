@@ -14,8 +14,6 @@ gem 'therubyracer', :platforms => :ruby
 group :development, :test do
   gem 'spring', '1.6.4'
   gem 'pry'
-  gem 'rubocop', '0.38.0'
-  gem 'rubocop-checkstyle_formatter', '0.2.0'
 end
 gem 'rails_12factor'
 gem 'config', '1.0.0'
