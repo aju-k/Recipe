@@ -1,17 +1,39 @@
+#default: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  database: 'recipes-production'
+#  pool: 50
+#  host: ec2-184-73-196-82.compute-1.amazonaws.com
+#  username: ranhoqvjdczsxm
+#  password: tSYu7TBsMCobIT0BsmlThvk-tX
+#
+#development:
+#  <<: *default
+#  database: d8beh3jg50d5q4
+#
+#production:
+#  <<: *default
+#  database: d8beh3jg50d5q4
+
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: d8beh3jg50d5q4
+  database: recipes-new
   pool: 50
-  host: ec2-184-73-196-82.compute-1.amazonaws.com
-  username: ranhoqvjdczsxm
-  password: tSYu7TBsMCobIT0BsmlThvk-tX
+  host: localhost
+  username: postgres
+  password: postgres
 
 development:
   <<: *default
-  database: d8beh3jg50d5q4
+  database: recipes-new
+
+#test:
+#  <<: *default
+#  database: found_fy_test
 
 production:
   <<: *default
-  database: d8beh3jg50d5q4
-
+  database: recipes-prod
+  username: postgres
+  password: postgres
