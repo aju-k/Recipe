@@ -7,6 +7,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.text   :description
       t.string :time_to_prepare
       t.string :recipe_type
+      t.boolean :is_veg, default: true
       t.integer :status, default: 1
       t.timestamps
     end
