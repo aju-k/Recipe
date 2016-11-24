@@ -9,7 +9,7 @@ class Api::V1::AndroidApp::ScrapDetailsController < BaseController
       #   puts data
       # end
       BankDetails.create(pincode: params[:pincode], latitude: params[:latitude], longitude: params[:longitude])
-      render nothing: true
+      render json: { response: 'Success' }
     end
   end
 
