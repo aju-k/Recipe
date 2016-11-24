@@ -20,5 +20,5 @@ gem 'config', '1.0.0'
 gem 'rest-client', '1.6.7'
 gem 'sinatra', require: false
 gem 'slim'
-
+gem 'paperclip'
 

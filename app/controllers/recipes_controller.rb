@@ -24,6 +24,7 @@ class RecipesController < ApplicationController
   end
 
   def create
+    binding.pry
     if params[:name].present? && params[:ingredients].present? && params[:description].present? &&
        params[:time_to_prepare].present? && params[:recipe_type].present? && params[:category_id].present?
       Recipe.create(name: params[:name], category_id: params[:category_id],
@@ -34,6 +35,8 @@ class RecipesController < ApplicationController
       error_response(402, 'Invalid parameters')
     end
   end
+
+
 
 
 
