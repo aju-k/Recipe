@@ -4,10 +4,10 @@ class Api::V1::AndroidApp::ScrapDetailsController < BaseController
 
   def save_details
     if params.present?
-      if BankDetail.select(:id).where(pincode: params[:pincode]).nil?
+      if BankDetail.select(:id).where(pincode: params[:pincode]).blank?
         params[:array].each do |record|
           BankDetail.create(pincode: params[:pincode], latitude: params[:latitude], longitude: params[:longitude],
-                            status: record['status'], bank_name: record['bank_name'], address: record['address'])
+                             status: record['status'], bank_name: record['bank_name'], address: record['address'])
         end
         render json: { response: 'Success' }
       else
